@@ -36,7 +36,16 @@ const wordUpdate = function(word){
     }
 
     wordInProgress.innerText = wordArray.join("");
-    console.log(wordInProgress);
+    //console.log(wordInProgress);
 
 }
 wordUpdate(word);
+
+guessButton.addEventListener("click", function(e){
+    e.preventDefault();
+
+    const guess = letterInput.value;
+    console.log(guess);
+    letterInput.value=""
+
+})
