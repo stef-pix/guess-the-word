@@ -5,7 +5,7 @@ const guessedLetters = document.querySelector(".guessed-letters");
 const guessButton = document.querySelector(".guess");
 
 //text input where player will guess a letter
-const letter = document.querySelector(".letter");
+const letterInput = document.querySelector(".letter");
 
 //empty <p> where word in progress will appear
 const wordInProgress = document.querySelector(".word-in-progress");
@@ -24,3 +24,19 @@ const newGame = document.querySelector(".play-again");
 
 //starting word
 const word = "magnolia";
+
+//word placeholder
+const wordUpdate = function(word){
+
+    wordArray=[];
+    const symbol = "●";
+
+    for (let i = 0; i < word.length; i++){
+        wordArray.push("●");
+    }
+
+    wordInProgress.innerText = wordArray.join("");
+    console.log(wordInProgress);
+
+}
+wordUpdate(word);
